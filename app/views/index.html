@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -8,37 +7,31 @@
 {% block content %}
 
   <div class="govuk-grid-row">
+    {% include "includes/side-nav.html" %}
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
+        API Products
+      </h1>
       <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
+        Companies House offers several API products to enable you to get the best out of the company information held at Companies House.
       </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <h2 class="govuk-heading-l">CHS Kafka API</h2>
+      <p>An API suite for interacting with kafka using HTTP</p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+      <h2 class="govuk-heading-l">Companies House API</h2>
+      <p>Companies House API</p>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+      <h2 class="govuk-heading-l">Manipulate company data</h2>
+      <p>An API suite that allows clients to manipulate company information, if they have authority to do so.</p>
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+      <h2 class="govuk-heading-l">Payment API</h2>
+      <p>The Companies House payment platform.</p>
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+      <h2 class="govuk-heading-l">Streaming API</h2>
+      <p>A streaming API giving access to real time data changes.</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-        <li>
-          <a href="https://design-system.service.gov.uk">
-            GOV.UK Design System
-          </a>
-        </li>
-      </ul>
     </div>
-</div>
+  </div>
 
 {% endblock %}
