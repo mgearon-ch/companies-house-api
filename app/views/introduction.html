@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    {% include "includes/side-nav.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Introduction to the Companies House JSON API
+      </h1>
+      <p>The Companies House API is a REST API that provides a simple, consistent approach to requesting and modifying data. REST stands for
+        <a href="http://en.wikipedia.org/wiki/Representational_state_transfer" rel="nofollow">Representational State Transfer</a>, an architectural software style in which standard HTTP request methods are used to retrieve and modify representations of data. This is identical to the process of retrieving a web page, or submitting a web form.</p>
+
+      <p>Previous versions of the Companies House API implemented an XML-RPC style of interface. Here data is retrieved or submitted by POSTing XML documents to the service, each defining the method to be called and the data to be processed.</p>
+
+      <p>The difference between both API approaches is defined below.</p>
+
+      <h2 class="govuk-heading-l">XML-RPC / SOAP</h2>
+      <p>An XML-RPC or or SOAP API might provide four methods to manipulate a customer record:</p>
+
+      <pre><code>
+http://api.example.domain/createcustomer
+http://api.example.domain/deletecustomer
+http://api.example.domain/updatecustomer
+http://api.example.domain/getcustomer
+          </code></pre>
+
+    </div>
+  </div>
+
+{% endblock %}
