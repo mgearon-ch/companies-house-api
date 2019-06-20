@@ -147,7 +147,39 @@ pre {
 pre code {
   display: block;
   color: #007f80;
+  line-height: 1.5;
   font-family: monospace, monospace;
   font-size: 1em;
   overflow-x: auto;
+}
+
+.app-header__title {
+  font-family: 'nta',Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+}
+
+@media print {
+  .app-header__title {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-header__title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .app-header__title {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
 }
