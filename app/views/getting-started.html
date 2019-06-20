@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Getting started with the Companies House API
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    {% include "includes/side-nav.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Getting started with the Companies House API
+      </h1>
+      <p>
+        The Companies House API lets you retrieve information about limited companies (and other companies that fall within the Companies Act 2006). The data returned is live and real-time, and is simple to use and understand.
+      </p>
+
+      <h2 class="govuk-heading-l">Quick start</h2>
+      <p>If you are already familiar with JSON RESTful APIs, then you can jump straight in with the
+        <a href="https://developer-specs.kermit.aws.chdev.org/guides/quickStart">quick start guide</a>. Otherwise, read on for a quick tour of the essentials.</p>
+
+      <h2 class="govuk-heading-l">First steps</h2>
+      <h3 class="govuk-heading-m">Set up a Companies House account</h3>
+      <p>To be able to explore and perform tests with the Companies House API, you need to register a user account with Companies House.</p>
+      <h3 class="govuk-heading-m">Overview</h3>
+      <p>The Companies House API overview describes the basic operation of the API.</p>
+      <h3>REST web services</h3>
+      <p>REST, or Representational State Transfer, is an architectural software style in which standard HTTP requests are used to provide a simple and consistent approach to requesting and modifying data.</p>
+      <p>In a RESTful style of API, data resources are allocated unique URLs and manipulated through standard HTTP verbs such as GET to request a resource, POST to create a resource, PUT to change a resource, and DELETE to remove a resource.</p>
+      <p>Further details on how the Companies House REST API works can be found in the introduction page.</p>
+      <h3 class="govuk-heading-m">The JSON data format</h3>
+      <p>JSON, or JavaScript Object Notation, is an open, standard format for storing and exchanging data. It is easier to use than XML, is more compact, and can be used as a data format by any programming language. This makes it ideal for HTTP-based API
+        services.</p>
+      <p>Further information can be found at json.org.</p>
+
+      <h3 class="govuk-heading-m">Authentication</h3>
+      <p>Access to all API services requires authentication. The Authorisation page describes the authorisation mechanism used by the Companies House API, and how to register your application.</p>
+      <h3 class="govuk-heading-m">Explore the API</h3>
+      <p>Each Companies House API reference page contains an embedded "explorer" that allows the reader to try out the service in-situ, without having to write any client code at all.</p>
+      <h3 class="govuk-heading-m">Developer guidelines</h3>
+      <p>There are some simple developer guidelines you can follow to help you achieve success with the Companies House API.</p>
+      <h3 class="govuk-heading-m">API rate limits</h3>
+      <p>The Companies House API is subject to rate limiting to protect the quality of service for all users.</p>
+      <h3 class="govuk-heading-m">Enumerated types</h3>
+      <p>A majority of the resources returned by the Companies House API contain members that reference enumuration types. This helps make the resources self-documenting, and allow clients to interpret the meaning of a resource member without needing to
+        otherwise parse a text description. Enumeration types are frequently used to supplement or replace a text description, which allows clients to display their own version of a description, more fitting their use case, or provide descriptions in
+        multiple languages.</p>
+      <p>The collection of enumuration types used by Companies House are available on GitHub. These files provide a mapping between enumuration type and text description, and are divided into sets or classes. Each API resource member will define which
+        class of enumuration is being returned.</p>
+      <p>A planned enhancement to the enumuration scheme is the provision of API endpoints that will return the enumuration class catalogue. This avoids having enumurations hard-coded within a client, and by periodically checking for change through ETags,
+        avoids clients having to download the full catalogue unnecessarily.</p>
+    </div>
+  </div>
+
+{% endblock %}

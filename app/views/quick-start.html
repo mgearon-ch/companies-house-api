@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Quick start
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    {% include "includes/side-nav.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Quick start
+      </h1>
+      <h2 class="govuk-heading-l">
+        Set up a Companies House account
+      </h2>
+      <p>To be able to explore and perform tests with the Companies House API, you need to register a user account with Companies House, and then generate an API key for use in each API request.</p>
+
+      <h2 class="govuk-heading-l">
+        Explore the API</h2>
+      <p>Each Companies House API reference page contains an embedded "explorer" that allows the reader to try out the service in-situ, without having to write any client code at all.
+      </p>
+    </div>
+  </div>
+
+{% endblock %}

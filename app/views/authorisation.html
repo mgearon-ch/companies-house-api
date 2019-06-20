@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Getting started with the Companies House API
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    {% include "includes/side-nav.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Authorisation
+      </h1>
+      <h2 class="govuk-heading-l">
+        API key authentication
+      </h2>
+      <p>The Companies House API requires authentication credentials, in the form of an API key, to be sent with each request.</p>
+      <p>To obtain an API key, go to Your applications and register the application with the Companies House Developer Hub as an API Key application. This will allocate a unique key to the application which can be sent with any GET request for a public
+        resource served by the Companies House API.</p>
+      <h2 class="govuk-heading-l">Sending the API key</h2>
+      <p>The Companies House API uses HTTP Basic Authentication to transmit an API key between the client application and the server. Basic authentication is usually made up of a username and password pair; the Companies House API takes the username as the
+        API key and ignores the password, so can be left blank.</p>
+      <h2 class="govuk-heading-l">Example</h2>
+      <h3 class="govuk-heading-l">HTTP Basic Authentication</h3>
+      <p>For an API key of my_api_key, the following curl request demonstrates the setting of the Authorization HTTP request header, as defined by RFC2617.</p>
+      <pre>
+        <code>curl -xget -u my_api_key: https://api.companieshouse.gov.uk/company/00000006
+
+get /company/00000006 http/1.1
+host: api.companieshouse.gov.uk
+authorization: basic bxlfyxbpx2tleto=</code></pre>
+    </div>
+  </div>
+
+{% endblock %}
