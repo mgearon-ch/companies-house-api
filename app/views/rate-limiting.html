@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Rate limiting
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    {% include "includes/side-nav.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Rate limiting
+      </h1>
+      <p>Rate limiting is applied to the Companies House API to ensure a high-quality service is delivered for all users, and to protect client applications from unexpected loops.</p>
+
+      <h2 class="govuk-heading-l">Per application rates</h2>
+      <p>You can make up to 600 requests within a five-minute period. If you exceed this limit, you will receive a 429 Too Many Requests HTTP status code for each request made within the remainder of the five-minute window. At the end of the period, your
+        rate limit will reset back to its maximum value of 600 requests.</p>
+      <h2 class="govuk-heading-l">Increasing your rate limit</h2>
+      <p>If you have an application that requires a higher rate limit than the default applied, then please contact us, we will be happy to help.</p>
+    </div>
+  </div>
+
+{% endblock %}

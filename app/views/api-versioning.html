@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Rate limiting
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    {% include "includes/side-nav.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Rate limiting
+      </h1>
+      <p>The Companies House API is versioned using MIME types and content negotiation.</p>
+      <p>You can request a specific version of a resource using the Accept request header, and the resource version is returned in the Content-Type response header.</p>
+      <p>Each resource is versioned independently - there is no global API version number.</p>
+      <p>Notes:</p>
+      <ul>
+        <li>the MIME types and resource examples used here are for demonstration purposes only, you should consult the API resource documentation for up to date MIME types</li>
+        <li>existing API resources will be frozen at v0 and will be maintained for 3 months</li>
+      </ul>
+      <h2 class="govuk-heading-l">Example</h2>
+      <p>This request returns the latest version (1.1) of a Company Profile resource:</p>
+      <pre><code>get /company/12345678 http/1.1
+accept: application/json
+
+http/1.1 200 ok
+content-type: application/x.companieshouse.company-profile+json; version=1.1
+
+{
+  "company_number": "12345678"
+}</code></pre>
+      <h2 class="govuk-heading-l">Version changes</h2>
+      <p>Version numbers will be incremented for breaking changes, for example:</p>
+      <ul>
+        <li>removing or renaming a field</li>
+        <li>changing a field data type</li>
+        <li>changing the structure of a nested field</li>
+      </ul>
+      <p>Non-breaking changes will not increment the version number, for example:</p>
+      <ul>
+        <li>adding additional fields</li>
+
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}
