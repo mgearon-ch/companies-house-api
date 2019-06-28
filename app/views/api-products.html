@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  API Products
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    {% include "includes/side-nav-apis.html" %}
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        API Products
+      </h1>
+      <p>
+        Companies House offers several API products to enable you to get the best out of the company information held at Companies House.
+      </p>
+
+      <h2 class="govuk-heading-l">CHS Kafka API</h2>
+      <p>An API suite for interacting with kafka using HTTP</p>
+
+      <h2 class="govuk-heading-l">Companies House API</h2>
+      <p>Companies House API</p>
+
+      <h2 class="govuk-heading-l">Manipulate company data</h2>
+      <p>An API suite that allows clients to manipulate company information, if they have authority to do so.</p>
+
+      <h2 class="govuk-heading-l">Payment API</h2>
+      <p>The Companies House payment platform.</p>
+
+      <h2 class="govuk-heading-l">Streaming API</h2>
+      <p>A streaming API giving access to real time data changes.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
