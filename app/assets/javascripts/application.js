@@ -23,3 +23,23 @@ clipboard.on('error', function (e) {
   console.error('Action:', e.action)
   console.error('Trigger:', e.trigger)
 })
+
+$(document).ready(
+  function () {
+    $('#app-mobile-nav-toggler').click(function () {
+      $('.app-mobile-nav').toggle()
+    })
+    if ($(window).width() > 640) {
+      $('.app-mobile-nav').hide()
+    } else {
+      $('.app-mobile-nav').show()
+    }
+    $(window).resize(function screenSize () {
+      if ($(window).width() > 640) {
+        $('.app-mobile-nav').hide()
+      } else {
+        $('.app-mobile-nav').show()
+      }
+    })
+  }
+)
