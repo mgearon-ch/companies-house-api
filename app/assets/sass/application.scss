@@ -618,3 +618,16 @@ pre code {
   color: #2b8cc4;
   background-color: inherit;
 }
+
+.govuk-phase-banner {
+  border-bottom: 0;
+}
+
+.govuk-header {
+  border-bottom: 10px solid rgb(0, 94, 165);
+}
+
+.govuk-header__container {
+  border-bottom: 0;
+  padding-bottom: 7px;
+}
